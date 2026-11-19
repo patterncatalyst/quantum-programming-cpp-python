@@ -1,0 +1,35 @@
+# Jekyll
+_site/
+.jekyll-cache/
+.jekyll-metadata
+.bundle/
+vendor/
+
+# Python / uv
+__pycache__/
+*.py[cod]
+.venv/
+.uv/
+.pytest_cache/
+.ruff_cache/
+
+# C++ / CMake
+build/
+*.o
+*.obj
+*.so
+*.a
+CMakeUserPresets.json
+
+# Generated manuscript artifacts (keep source in _docs/)
+manuscript/*.pdf
+manuscript/*.epub
+
+# Measurement / spike outputs with host details (scrub before committing)
+**/results/tmp/
+
+# Editor / OS
+.idea/
+.vscode/
+*.swp
+.DS_Store
