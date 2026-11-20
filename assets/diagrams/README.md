@@ -10,3 +10,5 @@ the repo root.
 | `coin-flip-circuit` | The quantum coin flip (H then measure) | Chapter 4 |
 | `weighted-coin-circuit` | The weighted coin (RY then measure) | Chapter 5 |
 | `teleportation-circuit` | Quantum teleportation | Chapter 6 |
+| `deutsch-jozsa-circuit` | Deutsch-Jozsa: the Hadamard sandwich | Chapter 7 |
+| `grover-circuit` | Grover's search: oracle plus diffusion | Chapter 8 |

@@ -108,4 +108,53 @@ g.emit(
             "anchor": "middle", "size": 12, "color": "#1d1d1d"}],
 )
 
-print("wrote 4 diagram pairs to assets/diagrams/")
+# --- Deutsch-Jozsa: Hadamard sandwich around an oracle ---------------------
+g.emit(
+    "deutsch-jozsa-circuit", 820, 240,
+    nodes=[
+        {"x": 30, "y": 44, "w": 90, "h": 52, "style": "sub", "lines": ["|0...0>"]},
+        {"x": 30, "y": 150, "w": 90, "h": 52, "style": "sub", "lines": ["|0>"]},
+        {"x": 170, "y": 44, "w": 80, "h": 52, "style": "accent", "lines": ["H (all)"]},
+        {"x": 170, "y": 150, "w": 80, "h": 52, "style": "sub", "lines": ["X, H", "(|->)"]},
+        {"x": 300, "y": 44, "w": 150, "h": 158, "style": "box",
+         "lines": ["oracle U_f", "|x>|y> ->", "|x>|y xor f(x)>"]},
+        {"x": 500, "y": 44, "w": 80, "h": 52, "style": "accent", "lines": ["H (all)"]},
+        {"x": 630, "y": 44, "w": 110, "h": 52, "style": "ink", "lines": ["measure"]},
+    ],
+    edges=[
+        {"x1": 120, "y1": 70, "x2": 170, "y2": 70},
+        {"x1": 250, "y1": 70, "x2": 300, "y2": 70},
+        {"x1": 120, "y1": 176, "x2": 170, "y2": 176},
+        {"x1": 250, "y1": 176, "x2": 300, "y2": 176},
+        {"x1": 450, "y1": 70, "x2": 500, "y2": 70},
+        {"x1": 580, "y1": 70, "x2": 630, "y2": 70},
+    ],
+    notes=[{"x": 400, "y": 228,
+            "text": "constant => inputs read all zeros; balanced => never",
+            "anchor": "middle", "size": 12, "color": "#1d1d1d"}],
+)
+
+# --- Grover: uniform superposition, then repeat oracle + diffusion ----------
+g.emit(
+    "grover-circuit", 860, 190,
+    nodes=[
+        box(30, 90, ["|0>^n"], "sub"),
+        box(170, 80, ["H (all)"], "accent"),
+        box(300, 130, ["oracle", "mark |w>"], "box"),
+        box(480, 140, ["diffusion", "reflect"], "box"),
+        box(680, 110, ["measure"], "ink"),
+    ],
+    edges=[
+        wire(120, 170),
+        wire(250, 300),
+        wire(430, 480),
+        wire(620, 680),
+        {"x1": 550, "y1": 28, "x2": 365, "y2": 28, "label": "x (pi/4) sqrt(2^n)",
+         "amber": True, "dashed": True, "ly": -6},
+    ],
+    notes=[{"x": 430, "y": 170,
+            "text": "each round rotates amplitude onto the marked item",
+            "anchor": "middle", "size": 12, "color": "#1d1d1d"}],
+)
+
+print("wrote 6 diagram pairs to assets/diagrams/")
