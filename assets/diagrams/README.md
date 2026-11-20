@@ -12,3 +12,5 @@ the repo root.
 | `teleportation-circuit` | Quantum teleportation | Chapter 6 |
 | `deutsch-jozsa-circuit` | Deutsch-Jozsa: the Hadamard sandwich | Chapter 7 |
 | `grover-circuit` | Grover's search: oracle plus diffusion | Chapter 8 |
+| `phase-estimation-circuit` | Phase estimation: controlled powers + inverse QFT | Chapter 9 |
+| `shor-circuit` | Shor's algorithm: order-finding + gcd | Chapter 10 |

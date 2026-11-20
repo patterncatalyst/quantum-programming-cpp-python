@@ -22,3 +22,5 @@ the full arc.
 | [`06-entanglement`](https://github.com/{{ site.github_username }}/{{ site.github_repo }}/tree/main/examples/06-entanglement) | Chapter 6 | Bell, GHZ, and teleportation in counts |
 | [`07-query-algorithms`](https://github.com/{{ site.github_username }}/{{ site.github_repo }}/tree/main/examples/07-query-algorithms) | Chapter 7 | Deutsch-Jozsa and Bernstein-Vazirani in one query |
 | [`08-grover`](https://github.com/{{ site.github_username }}/{{ site.github_repo }}/tree/main/examples/08-grover) | Chapter 8 | Grover's search by amplitude amplification |
+| [`09-qft-phase`](https://github.com/{{ site.github_username }}/{{ site.github_repo }}/tree/main/examples/09-qft-phase) | Chapter 9 | Phase estimation with the inverse QFT |
+| [`10-shor`](https://github.com/{{ site.github_username }}/{{ site.github_repo }}/tree/main/examples/10-shor) | Chapter 10 | Shor's algorithm factoring 15 |
