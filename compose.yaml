@@ -1,0 +1,18 @@
+# The two toolchain images, built multi-stage (build+test -> runtime).
+#   docker compose build        # build and test both tracks
+#   docker compose run --rm cpp     # run the C++ Bell state
+#   docker compose run --rm python  # run the Qiskit Bell state
+services:
+  cpp:
+    build:
+      context: .
+      dockerfile: containers/cpp/Containerfile
+      target: runtime
+    image: quantum-cpp
+
+  python:
+    build:
+      context: .
+      dockerfile: containers/python/Containerfile
+      target: runtime
+    image: quantum-python

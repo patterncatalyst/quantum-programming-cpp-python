@@ -1,0 +1,7 @@
+.git
+_site
+.jekyll-cache
+vendor
+examples/build
+.venv
+**/__pycache__

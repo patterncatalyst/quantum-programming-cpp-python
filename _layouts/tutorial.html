@@ -7,7 +7,7 @@ layout: default
   Threads through site.docs (sorted by `order`), falling back to
   site.pages when docs/ isn't a Jekyll collection.
 {%- endcomment -%}
-{%- assign tutorial_docs = site.docs | sort: "order" -%}
+{%- assign tutorial_docs = site.docs | where_exp: "d", "d.overview != true" | sort: "order" -%}
 {%- if tutorial_docs.size == 0 -%}
   {%- assign tutorial_docs = site.pages | where_exp: "p", "p.order != nil" | sort: "order" -%}
 {%- endif -%}
@@ -16,10 +16,17 @@ layout: default
     {%- assign current_index = forloop.index0 -%}
   {%- endif -%}
 {%- endfor -%}
-{%- assign prev_index = current_index | minus: 1 -%}
-{%- assign next_index = current_index | plus: 1 -%}
-{%- assign prev_doc = tutorial_docs[prev_index] -%}
-{%- assign next_doc = tutorial_docs[next_index] -%}
+{%- assign last_index = tutorial_docs.size | minus: 1 -%}
+{%- assign prev_doc = nil -%}
+{%- assign next_doc = nil -%}
+{%- if current_index and current_index > 0 -%}
+  {%- assign prev_index = current_index | minus: 1 -%}
+  {%- assign prev_doc = tutorial_docs[prev_index] -%}
+{%- endif -%}
+{%- if current_index != nil and current_index < last_index -%}
+  {%- assign next_index = current_index | plus: 1 -%}
+  {%- assign next_doc = tutorial_docs[next_index] -%}
+{%- endif -%}
 
 {%- comment -%}
   Pad order to two digits for the big numeric marker.
@@ -58,7 +65,11 @@ layout: default
           {%- if page.duration -%}
             <span class="chip">⏱ {{ page.duration }}</span>
           {%- endif -%}
-          <span class="chip">Chapter {{ page.order }}</span>
+          {%- if page.overview -%}
+            <span class="chip">Overview</span>
+          {%- else -%}
+            <span class="chip">Chapter {{ page.order }}</span>
+          {%- endif -%}
           {%- if page.part -%}<span class="chip chip--accent">{{ page.part }}</span>{%- endif -%}
         </div>
       </div>
@@ -68,6 +79,7 @@ layout: default
       {{ content }}
     </div>
 
+    {%- unless page.overview -%}
     <nav class="pager" aria-label="Tutorial navigation">
       {%- if prev_doc -%}
         <a class="pager__link pager__link--prev" href="{{ prev_doc.url | relative_url }}">
@@ -87,6 +99,7 @@ layout: default
         <span></span>
       {%- endif -%}
     </nav>
+    {%- endunless -%}
 
   </div>
 </article>

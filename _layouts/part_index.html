@@ -8,6 +8,7 @@ layout: default
   two-level navigation (Home → Part → Chapter).
 {%- endcomment -%}
 {%- assign part_docs = site.docs | where: "part", page.part_name | sort: "order" -%}
+{%- assign part_docs = part_docs | where_exp: "d", "d.overview != true" -%}
 {%- assign parts_sorted = site.parts | sort: "order" -%}
 
 <article class="doc-page">

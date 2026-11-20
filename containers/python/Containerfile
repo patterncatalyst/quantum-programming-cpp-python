@@ -1,0 +1,25 @@
+# syntax=docker/dockerfile:1
+#
+# Python track: build the environment with uv (managed CPython 3.14) and run the
+# tests. A failing pytest fails the image build.
+
+FROM registry.fedoraproject.org/fedora:44 AS build
+COPY --from=ghcr.io/astral-sh/uv:0.13.1 /uv /usr/local/bin/uv
+ENV UV_PYTHON_INSTALL_DIR=/opt/uv/python \
+    UV_PROJECT_ENVIRONMENT=/work/.venv
+WORKDIR /work
+COPY pyproject.toml uv.lock .python-version ./
+COPY examples/ ./examples/
+RUN uv python install 3.14 \
+    && uv sync --locked \
+    && uv run --no-sync pytest -q
+
+# Runtime image reuses the managed interpreter and the synced venv.
+FROM registry.fedoraproject.org/fedora:44 AS runtime
+COPY --from=ghcr.io/astral-sh/uv:0.13.1 /uv /usr/local/bin/uv
+ENV UV_PYTHON_INSTALL_DIR=/opt/uv/python \
+    UV_PROJECT_ENVIRONMENT=/work/.venv
+WORKDIR /work
+COPY --from=build /opt/uv/python /opt/uv/python
+COPY --from=build /work /work
+ENTRYPOINT ["uv", "run", "--no-sync", "python", "examples/00-setup/python/bell_state.py"]

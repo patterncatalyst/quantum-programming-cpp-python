@@ -1,6 +1,7 @@
 ---
 title: "Outline"
 order: 0
+overview: true
 part: "Prerequisites & Setup"
 description: "What this book covers and how it is organized: a primary C++ track with Python for contrast and testing, CPU-only and container-first."
 ---
