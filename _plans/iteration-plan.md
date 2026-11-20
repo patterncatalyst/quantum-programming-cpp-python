@@ -15,11 +15,12 @@ squash-merged, tagged `rNN.x` on main. The spike gates all chapter prose.
 | r01 | Toolchain + containers (lgtm-cpp, lgtm-python, lgtm-docker-stack), the verified spike (qpp Bell state + Qiskit cross-check in-container), and Ch0 setup | shipped |
 | r02 | Part 1 Foundations: Ch1 environment tour, Ch2 qubits/state vectors/measurement, Ch3 gates and circuits | shipped |
 | r03 | Part 2 First Programs: Ch4 first program (shots and counts), Ch5 measurement and sampling, Ch6 entanglement (Bell, GHZ, teleportation); circuit diagrams | shipped |
-| r04 | Part 3 Algorithms: Ch7 Deutsch-Jozsa/Bernstein-Vazirani, Ch8 Grover, Ch9 QFT/phase estimation, Ch10 Shor | next |
-| r05 | Part 4 Hybrid & Variational: Ch11 VQE, Ch12 QAOA | planned |
-| r06 | Part 5 Going Further: Ch13 simulator limits, Ch14 framework comparison, Ch15 optional real hardware | planned |
-| r07 | Appendix (linear algebra you need), post-quantum-vs-quantum sidebar, bibliography | planned |
-| r08 | Companion deck via lgtm-presentation (decks last) | planned |
+| r04 | Part 3 Algorithms (first half): Ch7 Deutsch-Jozsa/Bernstein-Vazirani, Ch8 Grover | shipped |
+| r05 | Part 3 Algorithms (second half): Ch9 QFT/phase estimation, Ch10 Shor | next |
+| r06 | Part 4 Hybrid & Variational: Ch11 VQE, Ch12 QAOA | planned |
+| r07 | Part 5 Going Further: Ch13 simulator limits, Ch14 framework comparison, Ch15 optional real hardware | planned |
+| r08 | Appendix (linear algebra you need), post-quantum-vs-quantum sidebar, bibliography | planned |
+| r09 | Companion deck via lgtm-presentation (decks last) | planned |
 
 > The spike was folded into r01 rather than taking its own iteration, so the
 > numbering runs one ahead of the original outline from r02 on.

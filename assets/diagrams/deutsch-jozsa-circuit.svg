@@ -1,0 +1,27 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 820 240" font-family="'Red Hat Text', system-ui, sans-serif" role="img">
+<defs><marker id="a" viewBox="0 0 10 10" refX="8.5" refY="5" markerWidth="9" markerHeight="9" orient="auto-start-reverse"><path d="M0,0 L10,5 L0,10 z" fill="#555"/></marker><marker id="am" viewBox="0 0 10 10" refX="8.5" refY="5" markerWidth="9" markerHeight="9" orient="auto-start-reverse"><path d="M0,0 L10,5 L0,10 z" fill="#b8650a"/></marker></defs>
+<rect x="30" y="44" width="90" height="52" rx="9" fill="#ffffff" stroke="#999999" stroke-width="1.5"/>
+<text x="75.0" y="75.5" font-size="13.5" font-weight="700" fill="#111111" text-anchor="middle">|0...0&gt;</text>
+<rect x="30" y="150" width="90" height="52" rx="9" fill="#ffffff" stroke="#999999" stroke-width="1.5"/>
+<text x="75.0" y="181.5" font-size="13.5" font-weight="700" fill="#111111" text-anchor="middle">|0&gt;</text>
+<rect x="170" y="44" width="80" height="52" rx="9" fill="#fff8ef" stroke="#e8870c" stroke-width="2"/>
+<text x="210.0" y="75.5" font-size="13.5" font-weight="700" fill="#111111" text-anchor="middle">H (all)</text>
+<rect x="170" y="150" width="80" height="52" rx="9" fill="#ffffff" stroke="#999999" stroke-width="1.5"/>
+<text x="210.0" y="174.0" font-size="13.5" font-weight="700" fill="#111111" text-anchor="middle">X, H</text>
+<text x="210.0" y="191.0" font-size="11.5" fill="#555555" text-anchor="middle">(|-&gt;)</text>
+<rect x="300" y="44" width="150" height="158" rx="9" fill="#ffffff" stroke="#111111" stroke-width="2"/>
+<text x="375.0" y="113.5" font-size="13.5" font-weight="700" fill="#111111" text-anchor="middle">oracle U_f</text>
+<text x="375.0" y="130.5" font-size="11.5" fill="#555555" text-anchor="middle">|x&gt;|y&gt; -&gt;</text>
+<text x="375.0" y="145.5" font-size="11.5" fill="#555555" text-anchor="middle">|x&gt;|y xor f(x)&gt;</text>
+<rect x="500" y="44" width="80" height="52" rx="9" fill="#fff8ef" stroke="#e8870c" stroke-width="2"/>
+<text x="540.0" y="75.5" font-size="13.5" font-weight="700" fill="#111111" text-anchor="middle">H (all)</text>
+<rect x="630" y="44" width="110" height="52" rx="9" fill="#f1f5f9" stroke="#64748b" stroke-width="2"/>
+<text x="685.0" y="75.5" font-size="13.5" font-weight="700" fill="#111111" text-anchor="middle">measure</text>
+<path d="M120,70 L170,70" fill="none" stroke="#555" stroke-width="2" marker-end="url(#a)"/>
+<path d="M250,70 L300,70" fill="none" stroke="#555" stroke-width="2" marker-end="url(#a)"/>
+<path d="M120,176 L170,176" fill="none" stroke="#555" stroke-width="2" marker-end="url(#a)"/>
+<path d="M250,176 L300,176" fill="none" stroke="#555" stroke-width="2" marker-end="url(#a)"/>
+<path d="M450,70 L500,70" fill="none" stroke="#555" stroke-width="2" marker-end="url(#a)"/>
+<path d="M580,70 L630,70" fill="none" stroke="#555" stroke-width="2" marker-end="url(#a)"/>
+<text x="400" y="228" font-size="12" fill="#1d1d1d" text-anchor="middle">constant =&gt; inputs read all zeros; balanced =&gt; never</text>
+</svg>

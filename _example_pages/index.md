@@ -20,3 +20,5 @@ the full arc.
 | [`04-first-program`](https://github.com/{{ site.github_username }}/{{ site.github_repo }}/tree/main/examples/04-first-program) | Chapter 4 | A full program: circuit, shots, measured counts |
 | [`05-measurement`](https://github.com/{{ site.github_username }}/{{ site.github_repo }}/tree/main/examples/05-measurement) | Chapter 5 | A weighted coin: amplitudes versus sampled counts |
 | [`06-entanglement`](https://github.com/{{ site.github_username }}/{{ site.github_repo }}/tree/main/examples/06-entanglement) | Chapter 6 | Bell, GHZ, and teleportation in counts |
+| [`07-query-algorithms`](https://github.com/{{ site.github_username }}/{{ site.github_repo }}/tree/main/examples/07-query-algorithms) | Chapter 7 | Deutsch-Jozsa and Bernstein-Vazirani in one query |
+| [`08-grover`](https://github.com/{{ site.github_username }}/{{ site.github_repo }}/tree/main/examples/08-grover) | Chapter 8 | Grover's search by amplitude amplification |
