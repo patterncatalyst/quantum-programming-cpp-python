@@ -17,7 +17,7 @@ squash-merged, tagged `rNN.x` on main. The spike gates all chapter prose.
 | r03 | Part 2 First Programs: Ch4 first program (shots and counts), Ch5 measurement and sampling, Ch6 entanglement (Bell, GHZ, teleportation); circuit diagrams | shipped |
 | r04 | Part 3 Algorithms (first half): Ch7 Deutsch-Jozsa/Bernstein-Vazirani, Ch8 Grover | shipped |
 | r05 | Part 3 Algorithms (second half): Ch9 QFT/phase estimation, Ch10 Shor | shipped |
-| r06 | Part 4 Hybrid & Variational: Ch11 VQE, Ch12 QAOA | planned |
+| r06 | Part 4 Hybrid & Variational: Ch11 VQE, Ch12 QAOA | shipped |
 | r07 | Part 5 Going Further: Ch13 simulator limits, Ch14 framework comparison, Ch15 optional real hardware | planned |
 | r08 | Appendix (linear algebra you need), post-quantum-vs-quantum sidebar, bibliography | planned |
 | r09 | Companion deck via lgtm-presentation (decks last) | planned |

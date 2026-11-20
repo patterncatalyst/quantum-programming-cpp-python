@@ -208,4 +208,52 @@ g.emit(
             "anchor": "middle", "size": 12, "color": "#1d1d1d"}],
 )
 
-print("wrote 8 diagram pairs to assets/diagrams/")
+# --- VQE: the quantum-classical optimization loop --------------------------
+g.emit(
+    "vqe-loop", 760, 220,
+    nodes=[
+        {"x": 40, "y": 70, "w": 170, "h": 64, "style": "accent",
+         "lines": ["classical optimizer", "propose theta"]},
+        {"x": 300, "y": 70, "w": 160, "h": 64, "style": "box",
+         "lines": ["quantum ansatz", "|psi(theta)>"]},
+        {"x": 550, "y": 70, "w": 170, "h": 64, "style": "ink",
+         "lines": ["measure energy", "<psi|H|psi>"]},
+    ],
+    edges=[
+        {"x1": 210, "y1": 102, "x2": 300, "y2": 102, "label": "theta"},
+        {"x1": 460, "y1": 102, "x2": 550, "y2": 102},
+        {"x1": 635, "y1": 134, "x2": 125, "y2": 134, "amber": True, "dashed": True,
+         "label": "lower energy -> new theta", "ly": 14},
+    ],
+    notes=[{"x": 380, "y": 200,
+            "text": "repeat until the energy stops dropping: the ground-state estimate",
+            "anchor": "middle", "size": 12, "color": "#1d1d1d"}],
+)
+
+# --- QAOA: cost + mixer layers with a classical tuning loop -----------------
+g.emit(
+    "qaoa-circuit", 920, 220,
+    nodes=[
+        box(30, 90, ["|0>^n"], "sub"),
+        box(160, 70, ["H (all)"], "accent"),
+        box(280, 120, ["cost layer", "ZZ per edge"], "box"),
+        box(450, 120, ["mixer", "RX per qubit"], "box"),
+        box(640, 90, ["measure"], "ink"),
+        {"x": 770, "y": 44, "w": 120, "h": 52, "style": "accent",
+         "lines": ["optimizer", "tune gamma, beta"]},
+    ],
+    edges=[
+        wire(120, 160),
+        wire(250, 280),
+        wire(400, 450),
+        wire(570, 640),
+        wire(730, 770),
+        {"x1": 830, "y1": 130, "x2": 340, "y2": 130, "amber": True, "dashed": True,
+         "label": "new angles", "ly": -6},
+    ],
+    notes=[{"x": 460, "y": 200,
+            "text": "tune the two angles to maximize the cut, then read the answer",
+            "anchor": "middle", "size": 12, "color": "#1d1d1d"}],
+)
+
+print("wrote 10 diagram pairs to assets/diagrams/")
