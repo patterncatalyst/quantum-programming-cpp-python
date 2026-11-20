@@ -11,16 +11,18 @@ squash-merged, tagged `rNN.x` on main. The spike gates all chapter prose.
 
 | Iteration | Scope | Status |
 |---|---|---|
-| r00 | Site scaffold (Jekyll house style), parts, outline, this plan | in progress |
-| r01 | Toolchain + containers: lgtm-cpp (Clang/CMake, Quantum++ via CMake), lgtm-python (uv, Python 3.14), lgtm-docker-stack (Docker Compose, multi-stage); Ch0 setup; `check-prereqs.sh` | planned |
-| r02 | The spike: build a qpp Bell state (C++) and a matching Qiskit run (Python) in-container; benchmark the qubit ceiling; record in `spike-results.md` | planned |
-| r03 | Part 1 Foundations: Ch1 environment tour, Ch2 qubits/state vectors/measurement, Ch3 gates and circuits | planned |
-| r04 | Part 2 First Programs: Ch4 first C++ circuit (qpp), Ch5 same in Qiskit, Ch6 entanglement | planned |
-| r05 | Part 3 Algorithms: Ch7 Deutsch-Jozsa/Bernstein-Vazirani, Ch8 Grover, Ch9 QFT/phase estimation, Ch10 Shor | planned |
-| r06 | Part 4 Hybrid & Variational: Ch11 VQE, Ch12 QAOA | planned |
-| r07 | Part 5 Going Further: Ch13 simulator limits, Ch14 framework comparison, Ch15 optional real hardware | planned |
-| r08 | Appendix (linear algebra you need), post-quantum-vs-quantum sidebar, bibliography | planned |
-| r09 | Companion deck via lgtm-presentation (decks last) | planned |
+| r00 | Site scaffold (Jekyll house style), parts, outline, this plan | shipped |
+| r01 | Toolchain + containers (lgtm-cpp, lgtm-python, lgtm-docker-stack), the verified spike (qpp Bell state + Qiskit cross-check in-container), and Ch0 setup | shipped |
+| r02 | Part 1 Foundations: Ch1 environment tour, Ch2 qubits/state vectors/measurement, Ch3 gates and circuits | shipped |
+| r03 | Part 2 First Programs: Ch4 first program (shots and counts), Ch5 measurement and sampling, Ch6 entanglement (Bell, GHZ, teleportation); circuit diagrams | shipped |
+| r04 | Part 3 Algorithms: Ch7 Deutsch-Jozsa/Bernstein-Vazirani, Ch8 Grover, Ch9 QFT/phase estimation, Ch10 Shor | next |
+| r05 | Part 4 Hybrid & Variational: Ch11 VQE, Ch12 QAOA | planned |
+| r06 | Part 5 Going Further: Ch13 simulator limits, Ch14 framework comparison, Ch15 optional real hardware | planned |
+| r07 | Appendix (linear algebra you need), post-quantum-vs-quantum sidebar, bibliography | planned |
+| r08 | Companion deck via lgtm-presentation (decks last) | planned |
+
+> The spike was folded into r01 rather than taking its own iteration, so the
+> numbering runs one ahead of the original outline from r02 on.
 
 ## Settled decisions
 
@@ -36,4 +38,7 @@ squash-merged, tagged `rNN.x` on main. The spike gates all chapter prose.
 - Spike must pass (r02): qpp and CUDA-Q build in-container; framework imports on 3.14 confirmed.
 - Keep the optional real-QPU (IBM Quantum) chapter, or stay simulator-only.
 - Revisit Python 3.15 once pennylane-lightning and CUDA-Q ship 3.15 wheels.
-- Diagram pass: paired SVG + Excalidraw figures via lgtm-diagram-generator, including the Ch3 H+CNOT circuit (CLAUDE.md requires circuits as diagram + code), batched from r03.
+- Diagram pass: done in r03. Paired SVG + Excalidraw circuit figures (Bell, coin
+  flip, weighted coin, teleportation) via `scripts/make_diagrams.py`, embedded in
+  Chapters 3 to 6 and on the Diagrams page. Add algorithm-circuit figures as the
+  r04+ chapters introduce them.
