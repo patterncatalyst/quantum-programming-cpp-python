@@ -33,7 +33,10 @@ permalink: /diagrams/
 <section class="section">
   <div class="container">
     <div class="diagram-gallery">
-      <p class="section-sub">No diagrams yet. They land with the first chapters (r03 onward).</p>
+      {% include excalidraw.html file="bell-circuit" alt="Two qubit wires: the top through a Hadamard then a control connected to a target on the bottom wire, both ending in measurements" caption="H then CNOT: the Bell pair (Chapters 3 and 6)" %}
+      {% include excalidraw.html file="coin-flip-circuit" alt="A single qubit wire through a Hadamard gate and then a measurement writing to a classical bit" caption="The quantum coin flip (Chapter 4)" %}
+      {% include excalidraw.html file="weighted-coin-circuit" alt="A single qubit wire through an RY rotation gate and then a measurement writing to a classical bit" caption="The weighted coin: an RY rotation sets the odds (Chapter 5)" %}
+      {% include excalidraw.html file="teleportation-circuit" alt="Three qubit wires where a Bell pair and a Bell measurement drive two classical bits that condition X and Z corrections on the third qubit" caption="Quantum teleportation (Chapter 6)" %}
     </div>
   </div>
 </section>

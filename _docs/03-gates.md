@@ -65,6 +65,8 @@ is a four-element vector and a two-qubit gate is a $4\times4$ matrix. The key on
 Apply H to the first qubit and then CNOT, and you get the Bell state from Chapter 0.
 A **circuit** is just this sequence of gates:
 
+{% include excalidraw.html file="bell-circuit" alt="Two qubit wires: the top through a Hadamard then a control dot connected to a target on the bottom wire, both ending in measurement meters" %}
+
 ```cpp
 ket psi = 00_ket;
 psi = apply(psi, gt.H, {0});        // superpose qubit 0
