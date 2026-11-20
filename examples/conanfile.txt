@@ -1,0 +1,7 @@
+[requires]
+eigen/3.4.1
+gtest/1.18.0
+
+[generators]
+CMakeToolchain
+CMakeDeps

@@ -1,0 +1,18 @@
+[project]
+name = "quantum-programming-examples"
+version = "0.0.0"
+description = "Python examples and test harness for the Quantum Programming in C++ and Python book"
+requires-python = ">=3.14,<3.15"
+dependencies = [
+    "qiskit>=2.2",
+    "qiskit-aer>=0.18",
+]
+
+[dependency-groups]
+dev = [
+    "pytest>=8",
+]
+
+[tool.pytest.ini_options]
+testpaths = ["examples"]
+python_files = ["*_test.py", "test_*.py"]

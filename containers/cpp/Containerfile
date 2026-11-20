@@ -1,0 +1,24 @@
+# syntax=docker/dockerfile:1
+#
+# C++ track: build and test the Quantum++ examples. A failing ctest fails the
+# image build, so the image is never produced from code that does not pass.
+
+FROM registry.fedoraproject.org/fedora:44 AS build
+RUN dnf -y install gcc-c++ cmake ninja-build git python3-pip \
+    && pip install --root-user-action=ignore "conan==2.31.2" \
+    && dnf clean all
+WORKDIR /work
+COPY examples/ ./examples/
+WORKDIR /work/examples
+RUN conan profile detect --exist-ok \
+    && conan install . --output-folder=build --build=missing -s compiler.cppstd=23 \
+    && cmake -S . -B build -G Ninja \
+         -DCMAKE_TOOLCHAIN_FILE=build/conan_toolchain.cmake -DCMAKE_BUILD_TYPE=Release \
+    && cmake --build build \
+    && ctest --test-dir build --output-on-failure
+
+# Runtime image carries only the built binary.
+FROM registry.fedoraproject.org/fedora:44 AS runtime
+RUN dnf -y install libstdc++ && dnf clean all
+COPY --from=build /work/examples/build/00-setup/cpp/bell_state /usr/local/bin/bell_state
+ENTRYPOINT ["/usr/local/bin/bell_state"]
