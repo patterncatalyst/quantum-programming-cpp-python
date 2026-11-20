@@ -1,0 +1,22 @@
+{%- comment -%}
+  MathJax 3 for LaTeX in chapters, pinned. Inline uses single $ (kramdown leaves
+  single dollars alone; prompts like [cpp]$ sit inside <pre>/<code> which MathJax
+  skips). The physics + braket packages are loaded so later chapters can use
+  \ket{}, \bra{}, and friends.
+{%- endcomment -%}
+<script>
+  window.MathJax = {
+    loader: { load: ['[tex]/physics', '[tex]/braket'] },
+    tex: {
+      inlineMath: [['$', '$'], ['\\(', '\\)']],
+      displayMath: [['$$', '$$'], ['\\[', '\\]']],
+      processEscapes: true,
+      packages: { '[+]': ['physics', 'braket'] }
+    },
+    options: {
+      skipHtmlTags: ['script', 'noscript', 'style', 'textarea', 'pre', 'code']
+    }
+  };
+</script>
+<script id="MathJax-script" async
+        src="https://cdn.jsdelivr.net/npm/mathjax@3.2.2/es5/tex-chtml.js"></script>

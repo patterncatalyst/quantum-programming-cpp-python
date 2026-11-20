@@ -30,4 +30,8 @@ target_link_libraries(qpp_headers INTERFACE Eigen3::Eigen)
 target_compile_features(qpp_headers INTERFACE cxx_std_23)
 
 enable_testing()
+include(GoogleTest)
 add_subdirectory(00-setup/cpp)
+add_subdirectory(01-environment/cpp)
+add_subdirectory(02-qubits/cpp)
+add_subdirectory(03-gates/cpp)

@@ -36,3 +36,4 @@ squash-merged, tagged `rNN.x` on main. The spike gates all chapter prose.
 - Spike must pass (r02): qpp and CUDA-Q build in-container; framework imports on 3.14 confirmed.
 - Keep the optional real-QPU (IBM Quantum) chapter, or stay simulator-only.
 - Revisit Python 3.15 once pennylane-lightning and CUDA-Q ship 3.15 wheels.
+- Diagram pass: paired SVG + Excalidraw figures via lgtm-diagram-generator, including the Ch3 H+CNOT circuit (CLAUDE.md requires circuits as diagram + code), batched from r03.
