@@ -157,4 +157,55 @@ g.emit(
             "anchor": "middle", "size": 12, "color": "#1d1d1d"}],
 )
 
-print("wrote 6 diagram pairs to assets/diagrams/")
+# --- Phase estimation: counting register + eigenstate ----------------------
+g.emit(
+    "phase-estimation-circuit", 860, 240,
+    nodes=[
+        {"x": 30, "y": 44, "w": 100, "h": 52, "style": "sub", "lines": ["|0>^t", "counting"]},
+        {"x": 30, "y": 150, "w": 100, "h": 52, "style": "sub", "lines": ["|psi>", "eigenstate"]},
+        {"x": 170, "y": 44, "w": 80, "h": 52, "style": "accent", "lines": ["H (all)"]},
+        {"x": 300, "y": 44, "w": 150, "h": 158, "style": "box",
+         "lines": ["controlled", "U^(2^j)", "qubit j -> U"]},
+        {"x": 500, "y": 44, "w": 120, "h": 52, "style": "box", "lines": ["inverse QFT"]},
+        {"x": 670, "y": 44, "w": 110, "h": 52, "style": "ink", "lines": ["measure"]},
+    ],
+    edges=[
+        {"x1": 130, "y1": 70, "x2": 170, "y2": 70},
+        {"x1": 250, "y1": 70, "x2": 300, "y2": 70},
+        {"x1": 130, "y1": 176, "x2": 300, "y2": 176},
+        {"x1": 450, "y1": 70, "x2": 500, "y2": 70},
+        {"x1": 620, "y1": 70, "x2": 670, "y2": 70},
+    ],
+    notes=[{"x": 420, "y": 228,
+            "text": "the inverse QFT reads the eigenphase into the counting register",
+            "anchor": "middle", "size": 12, "color": "#1d1d1d"}],
+)
+
+# --- Shor: order-finding (QPE on U_a) then classical post-processing --------
+g.emit(
+    "shor-circuit", 940, 240,
+    nodes=[
+        {"x": 30, "y": 44, "w": 100, "h": 52, "style": "sub", "lines": ["|0>^t", "counting"]},
+        {"x": 30, "y": 150, "w": 100, "h": 52, "style": "sub", "lines": ["|1>", "target"]},
+        {"x": 170, "y": 44, "w": 80, "h": 52, "style": "accent", "lines": ["H (all)"]},
+        {"x": 300, "y": 44, "w": 150, "h": 158, "style": "box",
+         "lines": ["controlled", "U_a^(2^j)", "y -> a*y mod N"]},
+        {"x": 500, "y": 44, "w": 110, "h": 52, "style": "box", "lines": ["inverse QFT"]},
+        {"x": 660, "y": 44, "w": 90, "h": 52, "style": "ink", "lines": ["measure"]},
+        {"x": 800, "y": 44, "w": 120, "h": 52, "style": "accent",
+         "lines": ["cont. fraction", "+ gcd"]},
+    ],
+    edges=[
+        {"x1": 130, "y1": 70, "x2": 170, "y2": 70},
+        {"x1": 250, "y1": 70, "x2": 300, "y2": 70},
+        {"x1": 130, "y1": 176, "x2": 300, "y2": 176},
+        {"x1": 450, "y1": 70, "x2": 500, "y2": 70},
+        {"x1": 610, "y1": 70, "x2": 660, "y2": 70},
+        {"x1": 750, "y1": 70, "x2": 800, "y2": 70, "amber": True, "label": "s/r"},
+    ],
+    notes=[{"x": 470, "y": 228,
+            "text": "quantum order-finding, then a classical gcd splits N",
+            "anchor": "middle", "size": 12, "color": "#1d1d1d"}],
+)
+
+print("wrote 8 diagram pairs to assets/diagrams/")
