@@ -14,3 +14,5 @@ the repo root.
 | `grover-circuit` | Grover's search: oracle plus diffusion | Chapter 8 |
 | `phase-estimation-circuit` | Phase estimation: controlled powers + inverse QFT | Chapter 9 |
 | `shor-circuit` | Shor's algorithm: order-finding + gcd | Chapter 10 |
+| `vqe-loop` | VQE: the quantum-classical optimization loop | Chapter 11 |
+| `qaoa-circuit` | QAOA: cost and mixer layers with tuning | Chapter 12 |

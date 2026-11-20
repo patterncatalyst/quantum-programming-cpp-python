@@ -41,6 +41,8 @@ permalink: /diagrams/
       {% include excalidraw.html file="grover-circuit" alt="A register through Hadamards, then a repeated oracle and diffusion block, ending in measurement" caption="Grover's search: oracle plus diffusion, repeated (Chapter 8)" %}
       {% include excalidraw.html file="phase-estimation-circuit" alt="A counting register through Hadamards drives controlled powers of U on an eigenstate, then an inverse QFT and measurement" caption="Phase estimation: controlled powers then inverse QFT (Chapter 9)" %}
       {% include excalidraw.html file="shor-circuit" alt="Phase estimation on the modular-multiplication gate feeding a classical continued-fraction and gcd step" caption="Shor's algorithm: order-finding plus a classical gcd (Chapter 10)" %}
+      {% include excalidraw.html file="vqe-loop" alt="A loop where a classical optimizer proposes parameters, a quantum circuit measures the energy, and the energy drives the next parameters" caption="VQE: the quantum-classical optimization loop (Chapter 11)" %}
+      {% include excalidraw.html file="qaoa-circuit" alt="A register through Hadamards, a cost layer and a mixer layer, with a classical optimizer tuning the angles, ending in measurement" caption="QAOA: cost and mixer layers with classical tuning (Chapter 12)" %}
     </div>
   </div>
 </section>

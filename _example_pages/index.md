@@ -24,3 +24,5 @@ the full arc.
 | [`08-grover`](https://github.com/{{ site.github_username }}/{{ site.github_repo }}/tree/main/examples/08-grover) | Chapter 8 | Grover's search by amplitude amplification |
 | [`09-qft-phase`](https://github.com/{{ site.github_username }}/{{ site.github_repo }}/tree/main/examples/09-qft-phase) | Chapter 9 | Phase estimation with the inverse QFT |
 | [`10-shor`](https://github.com/{{ site.github_username }}/{{ site.github_repo }}/tree/main/examples/10-shor) | Chapter 10 | Shor's algorithm factoring 15 |
+| [`11-vqe`](https://github.com/{{ site.github_username }}/{{ site.github_repo }}/tree/main/examples/11-vqe) | Chapter 11 | VQE finding a ground-state energy |
+| [`12-qaoa`](https://github.com/{{ site.github_username }}/{{ site.github_repo }}/tree/main/examples/12-qaoa) | Chapter 12 | QAOA solving MaxCut |
