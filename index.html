@@ -1,0 +1,81 @@
+---
+layout: default
+title: Home
+---
+
+<section class="hero">
+  <div class="container">
+    <span class="hero__eyebrow">C++ · Python · Quantum simulation · Fedora</span>
+    <h1 class="hero__title">{{ site.title }}</h1>
+    <p class="hero__lead">{{ site.description }}</p>
+    <div class="hero__cta">
+      <a class="btn btn--primary"
+         href="{{ '/docs/00-outline/' | relative_url }}">Start the tutorial →</a>
+      <a class="btn btn--secondary"
+         href="{{ '/docs/00-index/' | relative_url }}">Browse chapters</a>
+      <a class="btn btn--secondary"
+         href="https://github.com/{{ site.github_username }}/{{ site.github_repo }}"
+         rel="noopener">View on GitHub ↗</a>
+    </div>
+  </div>
+</section>
+
+<section class="section-tight">
+  <div class="container">
+    <div class="stats">
+      <div class="stat"><span class="stat__value">⚛️</span><span class="stat__label">Primary C++ track; Python for contrast and testing</span></div>
+      <div class="stat"><span class="stat__value">🐳</span><span class="stat__label">Runs in Docker, multi-stage, CPU only — no GPU, no cloud account</span></div>
+      <div class="stat"><span class="stat__value">🔬</span><span class="stat__label">Every result checked: measured counts against the analytic expectation</span></div>
+      <div class="stat"><span class="stat__value">🐍</span><span class="stat__label">uv-managed Python 3.14 in the build stage; the host stays untouched</span></div>
+    </div>
+  </div>
+</section>
+
+<section class="section">
+  <div class="container">
+    <h2 class="section-heading">What this tutorial is</h2>
+    <p class="section-sub">
+      A chapter-based, hands-on path to writing real quantum programs, with a
+      <strong>primary C++ track</strong> and a <strong>secondary Python track</strong>
+      used for contrast and testing. You build intuition from the state vector up
+      before reaching for a framework, then show each algorithm in C++
+      (<a href="https://github.com/softwareQinc/qpp">Quantum++</a>, with
+      <a href="https://nvidia.github.io/cuda-quantum/">CUDA-Q</a>'s CPU target as a
+      second option) and cross-check it against Python
+      (<a href="https://www.ibm.com/quantum/qiskit">Qiskit</a> and Aer, Cirq,
+      PennyLane). Everything runs on a normal Fedora workstation in Docker
+      containers, CPU only: no GPU, no cloud account, and no special hardware. The
+      qubit ceiling is about 25 to 30 on a workstation, which is enough for every
+      classic algorithm here.
+    </p>
+
+    {%- comment -%}
+      Two-level navigation: the homepage shows one card per Part. Each Part
+      card links to its own page (the _parts collection) which lists that
+      part's chapters. New chapters appear under their part automatically;
+      new parts appear here just by adding a file to _parts/.
+    {%- endcomment -%}
+    <div class="cards">
+      {% assign parts_sorted = site.parts | sort: "order" %}
+      {% for part in parts_sorted %}
+      {% assign part_all = site.docs | where: "part", part.part_name %}
+      {% assign part_docs = part_all | where_exp: "d", "d.url != '/docs/00-outline/'" %}
+      <a class="card" href="{{ part.url | relative_url }}">
+        <div class="card__eyebrow">Part {{ part.order }}</div>
+        <h3 class="card__title">{{ part.title }}</h3>
+        {% if part.blurb %}
+        <p class="card__desc">{{ part.blurb }}</p>
+        {% endif %}
+        <div class="card__meta">
+          {% if part_docs.size > 0 %}
+            <span>{{ part_docs.size }} chapter{% if part_docs.size != 1 %}s{% endif %}</span>
+          {% else %}
+            <span>Coming soon</span>
+          {% endif %}
+          <span>Explore →</span>
+        </div>
+      </a>
+      {% endfor %}
+    </div>
+  </div>
+</section>
