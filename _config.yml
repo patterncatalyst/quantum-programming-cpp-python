@@ -85,6 +85,7 @@ exclude:
   - examples/   # ← important: trailing slash; runnable code lives here, not site content
   - scripts/
   - containers/
+  - presentation/
   - manuscript/
   - compose.yaml
   - pyproject.toml

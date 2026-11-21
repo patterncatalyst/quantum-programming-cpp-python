@@ -5,6 +5,11 @@ _site/
 .bundle/
 vendor/
 
+# Presentation (deck build)
+presentation/node_modules/
+presentation/qa/
+presentation/png/
+
 # Python / uv
 __pycache__/
 *.py[cod]
