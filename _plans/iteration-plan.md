@@ -19,7 +19,7 @@ squash-merged, tagged `rNN.x` on main. The spike gates all chapter prose.
 | r05 | Part 3 Algorithms (second half): Ch9 QFT/phase estimation, Ch10 Shor | shipped |
 | r06 | Part 4 Hybrid & Variational: Ch11 VQE, Ch12 QAOA | shipped |
 | r07 | Part 5 Going Further: Ch13 simulator limits, Ch14 framework comparison, Ch15 optional real hardware | shipped |
-| r08 | Appendix (linear algebra you need), post-quantum-vs-quantum sidebar, bibliography | planned |
+| r08 | Appendix A (linear algebra you need), Appendix B (post-quantum-vs-quantum), bibliography | shipped |
 | r09 | Companion deck via lgtm-presentation (decks last) | planned |
 
 > The spike was folded into r01 rather than taking its own iteration, so the

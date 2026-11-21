@@ -48,9 +48,13 @@ The arc is below. Chapters link as they ship.
 - Ch14 · Framework comparison: Quantum++, CUDA-Q, Qiskit, Cirq
 - Ch15 · Optional: running on real hardware (IBM Quantum, free tier)
 
+## Appendices
+- Appendix A · The linear algebra you need
+- Appendix B · Post-quantum cryptography is not quantum computing
+
 ## A note on "post-quantum"
 
 Post-quantum cryptography (the ML-KEM and ML-DSA algorithms now shipping in
 RHEL 10 and UBI) secures today's systems against a future quantum attacker. That
 is a different subject from programming a quantum computer, which is what this book
-is about. A short sidebar later in the book clears up the confusion.
+is about. Appendix B clears up the confusion.

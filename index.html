@@ -67,7 +67,10 @@ title: Home
         <p class="card__desc">{{ part.blurb }}</p>
         {% endif %}
         <div class="card__meta">
-          {% if part_docs.size > 0 %}
+          {% assign first_doc = part_docs | first %}
+          {% if part_docs.size > 0 and first_doc.appendix %}
+            <span>{{ part_docs.size }} {% if part_docs.size == 1 %}appendix{% else %}appendices{% endif %}</span>
+          {% elsif part_docs.size > 0 %}
             <span>{{ part_docs.size }} chapter{% if part_docs.size != 1 %}s{% endif %}</span>
           {% else %}
             <span>Coming soon</span>
