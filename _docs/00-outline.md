@@ -52,6 +52,7 @@ The arc is below. Chapters link as they ship.
 - [Appendix A · The linear algebra you need]({{ '/docs/16-appendix-linear-algebra/' | relative_url }})
 - [Appendix B · Post-quantum cryptography is not quantum computing]({{ '/docs/17-appendix-post-quantum/' | relative_url }})
 - [Appendix C · Glossary]({{ '/docs/18-appendix-glossary/' | relative_url }})
+- [Appendix D · A guided demo]({{ '/docs/19-appendix-demo/' | relative_url }}): build the containers and run the Bell pair, Grover, and Shor yourself
 
 ## A note on "post-quantum"
 
