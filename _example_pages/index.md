@@ -26,3 +26,6 @@ the full arc.
 | [`10-shor`](https://github.com/{{ site.github_username }}/{{ site.github_repo }}/tree/main/examples/10-shor) | Chapter 10 | Shor's algorithm factoring 15 |
 | [`11-vqe`](https://github.com/{{ site.github_username }}/{{ site.github_repo }}/tree/main/examples/11-vqe) | Chapter 11 | VQE finding a ground-state energy |
 | [`12-qaoa`](https://github.com/{{ site.github_username }}/{{ site.github_repo }}/tree/main/examples/12-qaoa) | Chapter 12 | QAOA solving MaxCut |
+| [`13-simulator-limits`](https://github.com/{{ site.github_username }}/{{ site.github_repo }}/tree/main/examples/13-simulator-limits) | Chapter 13 | The 2^n state-vector memory wall |
+| [`14-frameworks`](https://github.com/{{ site.github_username }}/{{ site.github_repo }}/tree/main/examples/14-frameworks) | Chapter 14 | The same circuit, Quantum++ and Qiskit |
+| [`15-real-hardware`](https://github.com/{{ site.github_username }}/{{ site.github_repo }}/tree/main/examples/15-real-hardware) | Chapter 15 | Local reference, optional IBM Quantum run |

@@ -1,0 +1,15 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 720 210" font-family="'Red Hat Text', system-ui, sans-serif" role="img">
+<defs><marker id="a" viewBox="0 0 10 10" refX="8.5" refY="5" markerWidth="9" markerHeight="9" orient="auto-start-reverse"><path d="M0,0 L10,5 L0,10 z" fill="#555"/></marker><marker id="am" viewBox="0 0 10 10" refX="8.5" refY="5" markerWidth="9" markerHeight="9" orient="auto-start-reverse"><path d="M0,0 L10,5 L0,10 z" fill="#b8650a"/></marker></defs>
+<rect x="40" y="40" width="200" height="56" rx="9" fill="#ffffff" stroke="#111111" stroke-width="2"/>
+<text x="140.0" y="66.0" font-size="13.5" font-weight="700" fill="#111111" text-anchor="middle">Quantum++ (C++)</text>
+<text x="140.0" y="83.0" font-size="11.5" fill="#555555" text-anchor="middle">header-only, embeds</text>
+<rect x="40" y="120" width="200" height="56" rx="9" fill="#ffffff" stroke="#111111" stroke-width="2"/>
+<text x="140.0" y="146.0" font-size="13.5" font-weight="700" fill="#111111" text-anchor="middle">Qiskit (Python)</text>
+<text x="140.0" y="163.0" font-size="11.5" fill="#555555" text-anchor="middle">ecosystem, hardware</text>
+<rect x="440" y="80" width="220" height="56" rx="9" fill="#fff8ef" stroke="#e8870c" stroke-width="2"/>
+<text x="550.0" y="106.0" font-size="13.5" font-weight="700" fill="#111111" text-anchor="middle">same result</text>
+<text x="550.0" y="123.0" font-size="11.5" fill="#555555" text-anchor="middle">choose by fit, not correctness</text>
+<path d="M240,68 L440,100" fill="none" stroke="#555" stroke-width="2" marker-end="url(#a)"/>
+<path d="M240,148 L440,116" fill="none" stroke="#555" stroke-width="2" marker-end="url(#a)"/>
+<text x="360" y="198" font-size="12" fill="#1d1d1d" text-anchor="middle">both implement the same gate model; Cirq and PennyLane are further options</text>
+</svg>
