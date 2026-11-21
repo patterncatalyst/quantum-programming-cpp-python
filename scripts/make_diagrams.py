@@ -256,4 +256,67 @@ g.emit(
             "anchor": "middle", "size": 12, "color": "#1d1d1d"}],
 )
 
-print("wrote 10 diagram pairs to assets/diagrams/")
+# --- Simulator limits: the exponential memory wall -------------------------
+g.emit(
+    "exponential-wall", 840, 150,
+    nodes=[
+        box(30, 130, ["10 qubits", "16 KiB"], "sub"),
+        box(240, 130, ["20 qubits", "16 MiB"], "box"),
+        box(450, 130, ["30 qubits", "16 GiB"], "accent"),
+        box(660, 150, ["40 qubits", "16 TiB"], "ink"),
+    ],
+    edges=[
+        {"x1": 160, "y1": 70, "x2": 240, "y2": 70, "label": "x1024", "amber": True},
+        {"x1": 370, "y1": 70, "x2": 450, "y2": 70, "label": "x1024", "amber": True},
+        {"x1": 580, "y1": 70, "x2": 660, "y2": 70, "label": "x1024", "amber": True},
+    ],
+    notes=[{"x": 420, "y": 135,
+            "text": "every 10 qubits multiplies the state-vector memory by about 1000",
+            "anchor": "middle", "size": 12, "color": "#1d1d1d"}],
+)
+
+# --- Choosing a framework: same result, different ergonomics ---------------
+g.emit(
+    "framework-choice", 720, 210,
+    nodes=[
+        {"x": 40, "y": 40, "w": 200, "h": 56, "style": "box",
+         "lines": ["Quantum++ (C++)", "header-only, embeds"]},
+        {"x": 40, "y": 120, "w": 200, "h": 56, "style": "box",
+         "lines": ["Qiskit (Python)", "ecosystem, hardware"]},
+        {"x": 440, "y": 80, "w": 220, "h": 56, "style": "accent",
+         "lines": ["same result", "choose by fit, not correctness"]},
+    ],
+    edges=[
+        {"x1": 240, "y1": 68, "x2": 440, "y2": 100},
+        {"x1": 240, "y1": 148, "x2": 440, "y2": 116},
+    ],
+    notes=[{"x": 360, "y": 198,
+            "text": "both implement the same gate model; Cirq and PennyLane are further options",
+            "anchor": "middle", "size": 12, "color": "#1d1d1d"}],
+)
+
+# --- Real hardware: simulator reference vs a noisy device -------------------
+g.emit(
+    "hardware-vs-sim", 820, 220,
+    nodes=[
+        {"x": 30, "y": 80, "w": 150, "h": 56, "style": "sub",
+         "lines": ["Bell circuit"]},
+        {"x": 330, "y": 40, "w": 210, "h": 56, "style": "box",
+         "lines": ["simulator", "ideal: 00 and 11"]},
+        {"x": 330, "y": 120, "w": 210, "h": 56, "style": "ink",
+         "lines": ["IBM hardware", "noisy: a few 01, 10"]},
+        {"x": 630, "y": 80, "w": 160, "h": 56, "style": "accent",
+         "lines": ["compare", "read the error rate"]},
+    ],
+    edges=[
+        {"x1": 180, "y1": 108, "x2": 330, "y2": 68},
+        {"x1": 180, "y1": 108, "x2": 330, "y2": 148},
+        {"x1": 540, "y1": 68, "x2": 630, "y2": 100},
+        {"x1": 540, "y1": 148, "x2": 630, "y2": 116},
+    ],
+    notes=[{"x": 410, "y": 205,
+            "text": "the forbidden outcomes on hardware are its error rate made visible",
+            "anchor": "middle", "size": 12, "color": "#1d1d1d"}],
+)
+
+print("wrote 13 diagram pairs to assets/diagrams/")

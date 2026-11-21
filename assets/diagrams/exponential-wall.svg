@@ -1,0 +1,25 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 840 150" font-family="'Red Hat Text', system-ui, sans-serif" role="img">
+<defs><marker id="a" viewBox="0 0 10 10" refX="8.5" refY="5" markerWidth="9" markerHeight="9" orient="auto-start-reverse"><path d="M0,0 L10,5 L0,10 z" fill="#555"/></marker><marker id="am" viewBox="0 0 10 10" refX="8.5" refY="5" markerWidth="9" markerHeight="9" orient="auto-start-reverse"><path d="M0,0 L10,5 L0,10 z" fill="#b8650a"/></marker></defs>
+<rect x="30" y="44" width="130" height="52" rx="9" fill="#ffffff" stroke="#999999" stroke-width="1.5"/>
+<text x="95.0" y="68.0" font-size="13.5" font-weight="700" fill="#111111" text-anchor="middle">10 qubits</text>
+<text x="95.0" y="85.0" font-size="11.5" fill="#555555" text-anchor="middle">16 KiB</text>
+<rect x="240" y="44" width="130" height="52" rx="9" fill="#ffffff" stroke="#111111" stroke-width="2"/>
+<text x="305.0" y="68.0" font-size="13.5" font-weight="700" fill="#111111" text-anchor="middle">20 qubits</text>
+<text x="305.0" y="85.0" font-size="11.5" fill="#555555" text-anchor="middle">16 MiB</text>
+<rect x="450" y="44" width="130" height="52" rx="9" fill="#fff8ef" stroke="#e8870c" stroke-width="2"/>
+<text x="515.0" y="68.0" font-size="13.5" font-weight="700" fill="#111111" text-anchor="middle">30 qubits</text>
+<text x="515.0" y="85.0" font-size="11.5" fill="#555555" text-anchor="middle">16 GiB</text>
+<rect x="660" y="44" width="150" height="52" rx="9" fill="#f1f5f9" stroke="#64748b" stroke-width="2"/>
+<text x="735.0" y="68.0" font-size="13.5" font-weight="700" fill="#111111" text-anchor="middle">40 qubits</text>
+<text x="735.0" y="85.0" font-size="11.5" fill="#555555" text-anchor="middle">16 TiB</text>
+<path d="M160,70 L240,70" fill="none" stroke="#b8650a" stroke-width="2" marker-end="url(#am)"/>
+<text x="206.0" y="64.0" font-size="11" fill="#ffffff" stroke="#ffffff" stroke-width="3" paint-order="stroke" text-anchor="middle">x1024</text>
+<text x="206.0" y="64.0" font-size="11" fill="#b8650a" text-anchor="middle">x1024</text>
+<path d="M370,70 L450,70" fill="none" stroke="#b8650a" stroke-width="2" marker-end="url(#am)"/>
+<text x="416.0" y="64.0" font-size="11" fill="#ffffff" stroke="#ffffff" stroke-width="3" paint-order="stroke" text-anchor="middle">x1024</text>
+<text x="416.0" y="64.0" font-size="11" fill="#b8650a" text-anchor="middle">x1024</text>
+<path d="M580,70 L660,70" fill="none" stroke="#b8650a" stroke-width="2" marker-end="url(#am)"/>
+<text x="626.0" y="64.0" font-size="11" fill="#ffffff" stroke="#ffffff" stroke-width="3" paint-order="stroke" text-anchor="middle">x1024</text>
+<text x="626.0" y="64.0" font-size="11" fill="#b8650a" text-anchor="middle">x1024</text>
+<text x="420" y="135" font-size="12" fill="#1d1d1d" text-anchor="middle">every 10 qubits multiplies the state-vector memory by about 1000</text>
+</svg>
