@@ -22,6 +22,7 @@ squash-merged, tagged `rNN.x` on main. The spike gates all chapter prose.
 | r08 | Appendix A (linear algebra you need), Appendix B (post-quantum-vs-quantum), bibliography | shipped |
 | r09 | Companion deck via lgtm-presentation (decks last) | shipped |
 | r10 | Post-ship polish: outline chapter links, Appendix C glossary | shipped |
+| r11 | Companion demo: speaker runbook (presentation/) + Appendix D reader walkthrough, both verified in-container | shipped |
 
 > The spike was folded into r01 rather than taking its own iteration, so the
 > numbering runs one ahead of the original outline from r02 on.
