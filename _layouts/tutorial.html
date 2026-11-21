@@ -55,7 +55,7 @@ layout: default
     </nav>
 
     <header class="tutorial__header">
-      <div class="tutorial__num" aria-hidden="true">{{ order_padded }}</div>
+      <div class="tutorial__num" aria-hidden="true">{% if page.appendix %}{{ page.appendix | escape }}{% else %}{{ order_padded }}{% endif %}</div>
       <div class="tutorial__title-group">
         <h1>{{ page.title }}</h1>
         {%- if page.description -%}
@@ -65,7 +65,9 @@ layout: default
           {%- if page.duration -%}
             <span class="chip">⏱ {{ page.duration }}</span>
           {%- endif -%}
-          {%- if page.overview -%}
+          {%- if page.appendix -%}
+            <span class="chip">Appendix {{ page.appendix | escape }}</span>
+          {%- elsif page.overview -%}
             <span class="chip">Overview</span>
           {%- else -%}
             <span class="chip">Chapter {{ page.order }}</span>
